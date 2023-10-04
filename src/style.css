@@ -3,3 +3,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#grid{
+  --cell-size: 20px;
+  --gap: 1px;
+  --cols: 20;
+  --rows: 20;
+
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat( var(--cols), var(--cell-size) );
+  grid-template-rows: repeat( var(--rows), var(--cell-size) );
+  gap: var(--gap);
+
+  margin: 1rem auto;
+
+  background-color: #eaeaea;
+}
+
+#grid > .cell{
+  background-color: #272727;
+}
+#grid > .cell.open{
+  background-color: #f3ee55;
+}
